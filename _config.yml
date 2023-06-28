@@ -17,7 +17,7 @@ title: Programming Blog
 description: A Jekyll theme for documentation
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zhaocaiq.github.com" # the base hostname & protocol for your site, e.g. http://example.com
-repository: zhaocaiQ/ # for github-metadata
+repository: zhaocaiQ/zhaocaiQ # for github-metadata
 
 permalink: pretty
 
