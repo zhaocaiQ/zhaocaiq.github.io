@@ -1,7 +1,7 @@
 ---
 title: A minimal layout page
 layout: minimal
-parent: programming
+parent: Programming
 has_children: true
 ---
 
