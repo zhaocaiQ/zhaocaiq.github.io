@@ -229,7 +229,7 @@ The value of `callouts_level` is either `quiet` or `loud`;
 The default level is `quiet` when using the `light` or custom color schemes,
 and `loud` when using the `dark color scheme.`
 
-See [Callouts]({% link docs/ui-components/callouts.md %}) for more information.
+See [Callouts]({% link docs/programming/callouts.md %}) for more information.
 
 ## Google Analytics
 
