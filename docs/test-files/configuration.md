@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Configuration
-nav_order: 2
+title: tile
+parent: Test files
+nav_order: 1
 ---
 
-# Configuration
+# 쑤옮
 {: .no_toc }
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
-{: .fs-6 .fw-300 }
+테스트 포스트입니다.
+{: .fs-6 .fw-600 }
 
-## Table of contents
+## ㄴㅇㅇㄼㄷ
 {: .no_toc .text-delta }
 
 1. TOC
