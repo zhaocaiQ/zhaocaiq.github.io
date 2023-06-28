@@ -79,7 +79,7 @@
   width: 100%;
 
   @include mq(lg) {
-    width: calc(#{$nav-width} + 100);
+    width: calc(#{$nav-width} + 50);
   }
 }
 
