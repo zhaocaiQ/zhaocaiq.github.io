@@ -8,8 +8,8 @@ nav_order: 1
 # 쑤옮
 {: .no_toc }
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
-{: .fs-6 .fw-300 }
+테스트 포스트입니다.
+{: .fs-6 .fw-600 }
 
 ## ㄴㅇㅇㄼㄷ
 {: .no_toc .text-delta }
