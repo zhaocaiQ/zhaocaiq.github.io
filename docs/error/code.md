@@ -2,7 +2,6 @@
 layout: default
 title: Code
 parent: Error
-has_children: true
 nav_order: 5
 ---
 
