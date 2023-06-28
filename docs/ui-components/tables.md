@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Tables
-parent: Error
-nav_order: 2
+parent: UI Components
+nav_order: 4
 ---
 
 # Tables

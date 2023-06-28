@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Labels
-parent: Error
-nav_order: 4
+parent: UI Components
+nav_order: 3
 ---
 
 # Labels

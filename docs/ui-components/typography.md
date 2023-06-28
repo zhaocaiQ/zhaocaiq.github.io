@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Typography
-parent: Error
+parent: UI Components
 nav_order: 1
 ---
 

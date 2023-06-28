@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Responsive Modifiers
-parent: etc
+parent: Utilities
 ---
 
 # Responsive modifiers

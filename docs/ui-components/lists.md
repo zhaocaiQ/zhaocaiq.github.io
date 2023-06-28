@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Lists
-parent: Error
-nav_order: 3
+parent: UI Components
+nav_order: 5
 ---
 
 # Lists
