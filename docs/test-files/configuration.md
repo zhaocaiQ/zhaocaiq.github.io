@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ㅎㅎ
+title: tile
 parent: Test files
 nav_order: 1
 ---
