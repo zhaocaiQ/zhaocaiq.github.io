@@ -4,7 +4,6 @@ title: Test Files
 nav_order: 1
 has_children: true
 permalink: docs/test-files
-nav_exclude: true
 ---
 
 # Utilities
