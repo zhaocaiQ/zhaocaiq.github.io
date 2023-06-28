@@ -3,7 +3,6 @@ layout: default
 title: Buttons
 parent: Test Files
 nav_order: 1
-has_children: true
 ---
 
 # hi dears
