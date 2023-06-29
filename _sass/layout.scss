@@ -76,7 +76,7 @@
 .site-nav,
 .site-header,
 .site-footer {
-  width: 130%;
+  width: 100%;
 
   @include mq(lg) {
     width: $nav-width
