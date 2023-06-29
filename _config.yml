@@ -115,9 +115,6 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 nav_external_links:
   - title: Go to GitHub
     url: https://github.com/zhaocaiQ
-nav_external_links:
-  - title: Go to BLOG
-    url: https://blog.naver.com/daylay6
 
 # Footer content
 # appears at the bottom of every page's main content
