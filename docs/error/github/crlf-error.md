@@ -23,4 +23,4 @@ git config core.autocrlf true
 git config --global core.autocrlf true
 ```
 
-[CRLF 개행 문자] https://www.lesstif.com/gitbook/git-crlf-20776404.html "CRLF 개행 문자"
+[CRLF 개행 문자]: https://www.lesstif.com/gitbook/git-crlf-20776404.html "CRLF 개행 문자"
