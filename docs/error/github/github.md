@@ -1,8 +1,8 @@
 ---
-title: Spring Boot
+title: Github
 layout: default
 parent: Error
 has_children: true
 ---
 
-# 스프링 부트 작업 중 오류 해결
+# 깃허브 오류 해결

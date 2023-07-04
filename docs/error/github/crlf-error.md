@@ -1,7 +1,7 @@
 ---
 title: github add error
 layout: default
-parent: github
+parent: Github
 grand_parent: Error
 nav_order: 1
 ---
@@ -15,6 +15,12 @@ github에 add를 할 때 위와 같은 warning이 뜨면서 업로드될 파일�
 
 ```
 git config core.autocrlf true
+```
+
+혹은
+
+```
+git config --global core.autocrlf true
 ```
 
 [CRLF 개행 문자] https://www.lesstif.com/gitbook/git-crlf-20776404.html "CRLF 개행 문자"
