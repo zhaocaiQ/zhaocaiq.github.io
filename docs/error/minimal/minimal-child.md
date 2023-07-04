@@ -1,8 +1,9 @@
 ---
 title: nullpointerexception
 layout: default
-parent: spring
+parent: Spring Boot
 grand_parent: Error
+nav_order: 1
 ---
 
 {: .warning }
