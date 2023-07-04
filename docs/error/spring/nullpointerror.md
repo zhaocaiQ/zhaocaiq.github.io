@@ -3,7 +3,6 @@ title: nullpointerexception
 layout: default
 parent: spring
 grand_parent: Error
-nav_order: 1
 ---
 
 {: .warning }
