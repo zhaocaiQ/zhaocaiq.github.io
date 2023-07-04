@@ -1,9 +1,8 @@
 ---
 title: Spring Boot
-layout: spring
+layout: default
 parent: Error
 has_children: true
-permalink: /docs/error/minimal
 ---
 
 # 스프링 부트 작업 중 오류 해결
