@@ -10,9 +10,3 @@ permalink: /docs/error
 
 프로그래밍 중 발생하는 오류 해결
 {: .fs-6 .fw-300 }
-
-## spring boot 오류
-
-See the [Spring Boot] for an explanation of the general idea of layouts and how to specify them.
-
-[Spring Boot]: https://zhaocaiq.github.io/docs/error/minimal "Spring Boot"
