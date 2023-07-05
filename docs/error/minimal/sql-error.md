@@ -10,7 +10,7 @@ nav_order: 2
 Failed to execute SQL script statement #5 of class path resource
 
 
-spring boot 실행과 동시에 h2 데이터베이스에 테이블을 생성하는 코드를 작성했는데 위와 같은 오류가 발생했다.  
+spring boot 실행과 동시에 h2 데이터베이스에 테이블을 생성하는 코드를 작성했는데 위와 같은 오류가 발생했다.
 처음에는 application.yml코드에 init을 설정하지 않아서 sql문을 읽지 못해서 테이블이 생성 안되었다 생각했다.   
 
 ```
@@ -86,9 +86,9 @@ CREATE TABLE th_usr_cnt (
 그런데 한번에 테이블을 생성하기 위해 create문 여러개를 한번에 입력했더니 오류가 발생했다.
 ![sql-error2](/assets/images/sql-error2.png)
 
-위의 오류를 찾아보면 다 예약어를 사용했다고 나온다. 하나씩 생성했을 때 오류가 발생하지 않는 걸 보면  
-예약어 때문은 아니어서 또 고민하고 있는데 보인 콜론(;).. DROP문에는 끝에 콜론을 입력했는데  
-create문은 끝에 콜론을 입력하지 않았고, 콜론을 추가하니 오류가 발생하지 않고 테이블도 잘 생성되었다.
+위의 오류를 찾아보면 다 예약어를 사용했다고 나온다. 하나씩 생성했을 때 오류가 발생하지 않는 걸 보면 예약어 때문은
+아니어서 또 고민하고 있는데 보인 **콜론(;)**.. DROP문에는 끝에 콜론을 입력했는데 create문은 끝에 콜론을 입력하지 않았고,
+콜론을 추가하니 오류가 발생하지 않고 테이블도 잘 생성되었다.
 
 ```
 DROP TABLE IF EXISTS tm_usr_usr CASCADE;
