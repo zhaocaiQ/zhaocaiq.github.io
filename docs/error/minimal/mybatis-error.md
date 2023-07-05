@@ -25,6 +25,7 @@ public class UserServiceImpl implements UserService{
 ```
 
 
+
 실행을 했지만 또 다른 오류가 발생하였다..
 
 {: .warning }
@@ -32,6 +33,7 @@ Invalid bound statement (not found)
 
 Mapper 인터페이스와 Mapper.xml에 id가 달라서 혹은 오타가 있어서 application.yml파일에 오타가 있어서 등 [다양한 이유로 오류가 발생]한다고 되어 있는데 아무리 봐도 id를 다르게 입력하지도 않았고 오타도 없었다. Mapper.xml에 입력한 코드가 문제였나 싶어서 sql문도 여러번 확인해 봤지만 원인을 찾을 수 없었다.
 하지만 역시 구글링을 하다보니 답을 찾을 수 있었다. application.yml파일에서 [들여쓰기를 잘못]해서 mybatis를 spring 안에 쓴거였다.
+
 
 ```
 //** application.yml */
@@ -52,6 +54,7 @@ spring:
     # Mybatis mapper 위치 설정
     mapper-locations: mapper/*.xml
 ```
+
 
 위의 코드를 아래와 같이 바꾸니 오류없이 실행이 되었다.
 
