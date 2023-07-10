@@ -7,9 +7,9 @@ permalink: /
 ---
 
 # 이것저것 프로그래밍에 대한 지식을 적는 블로그
-{: .fs-9 }
+{: .fs-6 }
 
-[Go to Programming](#Description){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+<!-- [Go to Programming](#Description){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }/ -->
 
 ---
 
