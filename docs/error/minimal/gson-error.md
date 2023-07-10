@@ -38,7 +38,7 @@ spring:
       preferred-json-mapper: gson
 ```
 
-[결과]
+- 결과
 ![gson-error](/assets/images/gson-error.png)
 
 [GSON을 return할 때 발생하는 에러]: https://m.blog.naver.com/spring1a/221781696854 "GSON return에러"
