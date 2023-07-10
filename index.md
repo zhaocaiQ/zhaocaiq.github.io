@@ -6,8 +6,8 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 permalink: /
 ---
 
-# 이것저것 프로그래밍에 대한 지식을 적는 블로그
-{: .fs-6 }
+## 이것저것 프로그래밍에 대한 지식을 적는 블로그
+{: .fs-8 }
 
 <!-- [Go to Programming](#Description){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }/ -->
 
