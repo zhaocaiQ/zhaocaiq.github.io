@@ -7,7 +7,7 @@ grand_parent: Programming
 
 
 ## chunk 반복실행 되지 않음    
-
+   
 처음엔 tasklet으로 작성하였지만 대량처리를 할 경우 tasklet보다는 chunk를 이용하여 chuck_size에 맞게 나눠처리하도록 하는 것이 자원에 과부화가 없고 좋다고 하여 chunk로 변경했다.
 
 ```

@@ -34,6 +34,7 @@ System.out.println(timeNow.compareTo(plusOneYear));
 ```
    
 - 현재보다 이전 날짜 비교
+
 ```
 System.out.println(timeNow.compareTo(minusOneYear));
 ```
