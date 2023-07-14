@@ -6,10 +6,9 @@ grand_parent: Programming
 ---
 
 
-## chunk 반복실행 되지 않음
+## chunk 반복실행 되지 않음    
 
 처음엔 tasklet으로 작성하였지만 대량처리를 할 경우 tasklet보다는 chunk를 이용하여 chuck_size에 맞게 나눠처리하도록 하는 것이 자원에 과부화가 없고 좋다고 하여 chunk로 변경했다.
-
 
 ```
 //BatchConfiguration.java
@@ -87,9 +86,8 @@ public class BatchConfiguration {
     }
 }
 ```
-
+   
 batch는 하나의 작업을 일괄처리되도록 작성한 코드일 뿐, 특정시간에 동작하도록 하기 위해서는 스케줄러로 시간을 지정해줘야 하는 것 같다. 스케줄러로 사용되는 건 Scheduler와 Quarts 두개가 있는데 퀄츠는 어려워 보여 스케줄러로 일단 작업했다.
-
 
 ```
 //BatchScheduler.java
@@ -137,19 +135,18 @@ public class BatchScheduler {
     }
 }
 ```
-
+   
 하지만 chunk로 작업을 하니 스케줄러가 작동을 해도 chunk인 step은 프로젝트 실행할 때 한 번 작동 후 그 뒤로는 tasklet만 작동한다..   
 
 ![spring-batch1](/assets/images/spring-batch1.png)
-
-
+   
 [해결]   
 
 chunk가 한번만 돌고 그 뒤로 실행이 안되서 진심 batch에 대한 정보란 정보는 다 본 거 같은데 해결을 못해서 [StackOverFlow]에 글을 올렸는데 ListItemReader은 @Bean과 함께 @JobScope이나 @StepScope을 사용해야 한다는 답변이 달렸다.   
 
 ![spring-batch2](/assets/images/spring-batch2.png)
 
-
+   
 그래서 ListItemReader를 사용하는 Step에 @JobScope 어노테이션을 추가 했더니 스케줄러에 설정한 대로 10마다 해당 batch가 실행된다.   
 
 ```
@@ -174,7 +171,7 @@ public Step step(JobRepository jobRepository, PlatformTransactionManager transac
             .build();
 }
 ```
-
+   
 [결과]  
 
 ![spring-batch3](/assets/images/spring-batch3.png)
