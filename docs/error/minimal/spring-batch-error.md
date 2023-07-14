@@ -3,7 +3,6 @@ title: Spring batch error
 layout: default
 parent: Spring Boot
 grand_parent: Error
-nav_order: 6
 ---
 
 {: .warning }
@@ -11,6 +10,8 @@ nav_order: 6
 
 
 Spring batch 코드를 작성한 후 실행을 했지만 위와 같은 오류가 발생함.
+해당 테이블이 필요하지만 해당 테이블이 생성이 되지 않아 일어난 오류였다.
+
 
 ```
 //** BatchConfiguration.java */
@@ -49,7 +50,7 @@ public class BatchConfiguration {
 }
 ```
 
-application.yml 파일에 [아래 코드]를 입력하면 해당 오류 없이 정상적으로 실행된다.
+application.yml 파일에 [아래 코드]로 자동으로 테이블을 생성하는 코드를 입력하면 해당 오류 없이 정상적으로 실행된다.
 
 
 ```
