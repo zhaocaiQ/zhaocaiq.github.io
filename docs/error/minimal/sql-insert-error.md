@@ -3,7 +3,6 @@ title: sql insert문 오류
 layout: default
 parent: Spring Boot
 grand_parent: Error
-nav_order: 3
 ---
 
 {: .warning }
