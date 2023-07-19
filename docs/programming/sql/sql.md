@@ -1,8 +1,8 @@
 ---
-title: Java
+title: Sql
 layout: default
 parent: Programming
 has_children: true
 ---
 
-# Java Programming 기록
+# Sql Programming 기록

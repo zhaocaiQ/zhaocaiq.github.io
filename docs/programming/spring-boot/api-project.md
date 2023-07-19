@@ -53,4 +53,3 @@ mybatis:
 ```
 
 ## application.yml에 필요한 설정입력  
-

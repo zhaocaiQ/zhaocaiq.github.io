@@ -1,8 +1,8 @@
 ---
-title: Java
+title: Spring
 layout: default
 parent: Programming
 has_children: true
 ---
 
-# Java Programming 기록
+# Spring Boot Programming 기록
