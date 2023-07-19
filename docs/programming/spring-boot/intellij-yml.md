@@ -1,27 +1,55 @@
 ---
-title: IntelliJ yaml파일 한글 설정
+title: API프로젝트-1 회원 CRUD
 layout: default
-parent: Java
+parent: Spring
 grand_parent: Programming
 ---
 
 
-## yml 파일 한글깨짐 오류 해결   
-
-![intellij-yml2](/assets/images/intellij-yml2.png)   
-
-yml파일에 한글을 쓰면 깨지는 오류가 있어 [해결]해보았다.
+## application.yml에 필요한 설정입력   
 
 
-Settings → Editor → File Encodings애 들어가 아래와 같이 Encoding을 'UTF-8'로 변경 한다.   
-Transparent natvive-to-ascii conversion 체크박스도 체크한다.   
+```
+//** application.yml */
 
+server:
+  port: 8085
 
-Settings창을 여는 단축키: ** ctrl + alt + s **
+spring:
+  #H2 환경설정
+  h2:
+    console:
+      enabled: true #H2 console을 사용할지 여부
+      path: /h2-console #H2 console 접근 path
 
-![intellij-yml1](/assets/images/intellij-yml1.png)
+  #H2 연결을 위한 정보입력
+  datasource:
+    driver-class-name: org.h2.Driver #데이터베이스로 H2사용 선언
+    url: jdbc:h2:~/education
+    username: sa
+    password:
 
-[결과]   
-![intellij-yml3](/assets/images/intellij-yml3.png)
+  sql:
+    init:
+      mode: always #생성 설정 always: 서버 재가동마다 schema, data 새로생성
+      schema-locations: classpath:schema.sql #스키마생성 sql문 기입 파일위치
+      data: classpath:data.sql #데이터 삽입 sql문 기입 파일위치
+      encoding: utf-8 #H2 한글깨짐 현상 해결
 
-[해결]: https://www.lesstif.com/java/intellij-file-console-encoding-121012310.html "인텔리제이 yaml파일 한글깨짐 현상 해결"
+  mvc:
+    converters:
+      preferred-json-mapper: gson #gson 사용 선언
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #카멜표기법으로 설정
+
+  #xml파일 result type에 패키지명 생략할 수 있도록 설정
+  type-aliases-package: com.education3.education3
+
+  #Mybatis mapper 위치 설정
+  mapper-locations: mapper/*.xml
+```
+
+## application.yml에 필요한 설정입력  
+
