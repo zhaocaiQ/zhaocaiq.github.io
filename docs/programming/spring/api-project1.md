@@ -52,6 +52,5 @@ mybatis:
   mapper-locations: mapper/*.xml
 ```
 
-## MVC를 위한 폴더구조   
+## application.yml에 필요한 설정입력  
 
-![api-project1-1](/assets/images/api-project1-1.png)

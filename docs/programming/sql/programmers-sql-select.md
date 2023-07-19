@@ -156,7 +156,7 @@ ORDER  BY USER_ID, PRODUCT_ID DESC;
   HAVING으로 그룹화 한 결과에서 원하는 조건을 적용시키면 된다.
 
 - [WHERE과 HAVING의 차이점]   
-WHERE: 해당 컬럼에서 조건을 만족하는 데이터 필터링
+WHERE: 해당 컬럼에서 조건을 만족하는 데이터 필터링   
 HAVING: GROUP BY로 집계한 결과에서 조건에 만족하는 데이터 필터링
 
 ***
@@ -202,11 +202,11 @@ WHERE  DATE_FORMAT(SALES_DATE, '%Y-%m') = '2022-03'
 ORDER  BY SALES_DATE, PRODUCT_ID, USER_ID;
 ```
 
-- [UNION]으로 두 개의 SELECT문을 합쳐서 결과를 반환해야 한다
-UNION: 중복되는 행이 있을 경우 중복을 제거하고 하나만 더함
+- [UNION]으로 두 개의 SELECT문을 합쳐서 결과를 반환해야 한다   
+UNION: 중복되는 행이 있을 경우 중복을 제거하고 하나만 더함   
 UNION ALL: 중복과 상관없이 모두 다 더함
 
-ORDER BY는 UNION ALL한 결과에 대해 정렬해주므로 한번만 입력하면 됨
+- ORDER BY는 UNION ALL한 결과에 대해 정렬해주므로 한번만 입력하면 됨
 
 
 
