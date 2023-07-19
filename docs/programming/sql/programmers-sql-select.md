@@ -17,7 +17,7 @@ WHERE  ADDRESS LIKE '강원도%'
 ORDER  BY FACTORY_ID
 ```
 
- ---  
+***
 
 ### [흉부외과 또는 일반외과 의사 목록 출력하기]   
 
@@ -28,7 +28,7 @@ WHERE  MCDP_CD = 'CS' OR MCDP_CD = 'GS'
 ORDER  BY HIRE_YMD DESC, DR_NAME
 ```
 
----
+***
 
     
 ### [조건에 맞는 도서 리스트 출력하기]   
@@ -41,7 +41,7 @@ WHERE  DATE_FORMAT(PUBLISHED_DATE, '%Y') = '2021'
 ORDER  BY PUBLISHED_DATE;
 ```
 
----
+***
 
 
 ### [과일로 만든 아이스크림 고르기]   
@@ -54,7 +54,7 @@ WHERE  FH.TOTAL_ORDER >= 3000
        AND II.INGREDIENT_TYPE = 'fruit_based';
 ```
 
----
+***
 
 ### [12세 이하인 여자 환자 목록 출력하기]   
 
@@ -66,7 +66,7 @@ WHERE  AGE <= 12
 ORDER  BY AGE DESC, PT_NAME;
 ```
 
----
+***
 
 ### [조건에 부합하는 중고거래 댓글 조회하기]   
 
@@ -78,7 +78,7 @@ WHERE  UGB.BOARD_ID = UGR.BOARD_ID
 ORDER  BY DATE_FORMAT(UGR.CREATED_DATE, '%Y-%m-%d'), UGB.TITLE;
 ```
 
----
+***
 
 ### [평균 일일 대여 요금 구하기]   
 
@@ -89,7 +89,7 @@ WHERE  CAR_TYPE = 'SUV'
 GROUP  BY CAR_TYPE
 ```
 
----
+***
 
 ### [인기있는 아이스크림]   
 
@@ -99,7 +99,7 @@ FROM   FIRST_HALF
 ORDER  BY TOTAL_ORDER DESC, SHIPMENT_ID; 
 ```
 
----
+***
 
 ### [조건에 맞는 회원수 구하기]   
 
@@ -116,8 +116,8 @@ WHERE  DATE_FORMAT(JOINED, '%Y') = '2021'
 컬럼명 BETWEEN 조건1 AND 조건2
 ```
 
----
----
+***
+***
 
 ## Level2
 
@@ -139,7 +139,7 @@ ORDER  BY MEMBER_ID
 NOT 컬럼명 IS NULL
 ```
 
----
+***
 
 ### [재구매가 일어난 상품과 회원 리스트 구하기]   
 
@@ -159,8 +159,8 @@ ORDER  BY USER_ID, PRODUCT_ID DESC;
 WHERE: 해당 컬럼에서 조건을 만족하는 데이터 필터링
 HAVING: GROUP BY로 집계한 결과에서 조건에 만족하는 데이터 필터링
 
----
----
+***
+***
 
 
 ## Level4   
@@ -187,7 +187,7 @@ FROM   REST_REVIEW
 GROUP  BY REST_ID
 ```
 
----
+***
 
 ### [오프라인/온라인 판매 데이터 통합하기]   
 
