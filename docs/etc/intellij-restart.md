@@ -17,18 +17,18 @@ dependencies {
 2. Settings 설정
 
 - Compiler에서 "Build project automatically" 체크   
-![intellij-restart1]("/assets/images/intellij-restart1.png")
+![intellij-restarted1]("/assets/images/intellij-restarted1.png")
 
 - Advanced Settings에서 "Allow auto-make to start even if developed application is currently running" 체크   
-![intellij-restart2]("/assets/images/intellij-restart2.png")
+![intellij-restarted2]("/assets/images/intellij-restarted2.png")
 
 - Gradle에서 "Build and run using"과 "Run tests using"을 IntelliJ IDEA로 변경    
-![intellij-restart3]("/assets/images/intellij-restart3.png")
+![intellij-restarted3]("/assets/images/intellij-restarted3.png")
 
 
 [결과]   
 콘솔에 restartedMain이라고 뜨면 설정이 완료되었다.    
-![intellij-restart4]("/assets/images/intellij-restart4.png")
+![intellij-restarted4]("/assets/images/intellij-restarted4.png")
 
 출처: IntelliJ 빌드/실행 플랫폼 변경 및 소스코드 자동반영 설정
 
