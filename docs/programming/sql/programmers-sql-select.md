@@ -1,7 +1,7 @@
 ---
-title: 프로그래머스 코딩테스트(SQL) - SELECT
+title: 프로그래머스 코딩테스트(sql) - SELECT
 layout: default
-parent: SQL
+parent: Sql
 grand_parent: Programming
 ---
 
@@ -113,7 +113,7 @@ WHERE  DATE_FORMAT(JOINED, '%Y') = '2021'
 - 20세 이상 29세 이하 범위의 조건에 맞는 회원을 추출해야 하므로 BETWEEN을 이용함
 
 ```
-컬럼명 BETWEEN 범위1 AND 범위2
+컬럼명 BETWEEN 조건1 AND 조건2
 ```
 
 ---
