@@ -4,6 +4,8 @@ layout: default
 parent: Etc
 ---
 
+# 인텔리제이 소스코드 자동반영 설정하기    
+
 1. build.gradle에서 dependencies 설정   
 
 ```
@@ -27,7 +29,7 @@ dependencies {
 
 
 [결과]   
-콘솔에 restartedMain이라고 뜨면 설정이 완료되었다.    
+콘솔에 restartedMain이라고 뜨면 설정완료.    
 ![intellij-restarted4](/assets/images/intellij-restarted4.png)
 
 출처: [IntelliJ 빌드/실행 플랫폼 변경 및 소스코드 자동반영 설정]
