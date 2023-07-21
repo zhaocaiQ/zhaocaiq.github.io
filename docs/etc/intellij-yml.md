@@ -1,8 +1,7 @@
 ---
 title: IntelliJ yaml파일 한글 설정
 layout: default
-parent: Java
-grand_parent: Programming
+parent: Etc
 ---
 
 
