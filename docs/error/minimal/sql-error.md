@@ -3,11 +3,11 @@ title: schema.sql error
 layout: default
 parent: Spring Boot
 grand_parent: Error
-nav_order: 2
 ---
 
 {: .warning }
 Failed to execute SQL script statement #5 of class path resource
+
 
 
 spring boot 실행과 동시에 h2 데이터베이스에 테이블을 생성하는 코드를 작성했는데 위와 같은 오류가 발생했다.
@@ -38,6 +38,8 @@ spring:
   jpa:
     defer-datasource-initialization: true
 ```
+
+
 
 하지만 init을 추가해도 계속해서 오류가 발생하였다.  
 오류를 검색해도 마땅한 해결책이 안나와서 sql문이 혹시 잘 못 되었나하고 sql문도 계속 살펴 봤는데 크게 문제는 없었다.
@@ -80,11 +82,14 @@ CREATE TABLE th_usr_cnt (
     )
 ```
 
+
 그래서 직접 h2 DB에 위의 명령어를 입력해봤는데 아래와 같이 아주 잘 생성되었다.
 ![sql-error1](/assets/images/sql-error1.png)
 
+
 그런데 한번에 테이블을 생성하기 위해 create문 여러개를 한번에 입력했더니 오류가 발생했다.
 ![sql-error2](/assets/images/sql-error2.png)
+
 
 위의 오류를 찾아보면 다 예약어를 사용했다고 나온다. 하나씩 생성했을 때 오류가 발생하지 않는 걸 보면 예약어 때문은
 아니어서 또 고민하고 있는데 보인 **콜론(;)**.. DROP문에는 끝에 콜론을 입력했는데 create문은 끝에 콜론을 입력하지 않았고,

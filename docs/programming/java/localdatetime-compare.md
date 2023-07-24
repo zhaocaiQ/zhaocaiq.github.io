@@ -7,7 +7,7 @@ grand_parent: Programming
 
 
 ## LocalDateTime.compareTo()   
-
+   
 [compareTo()] 메서드는 각 객체를 서로 비교하여 숫자로 결과값을 반환해줌
 
 ```

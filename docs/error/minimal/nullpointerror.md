@@ -3,11 +3,11 @@ title: nullpointerexception
 layout: default
 parent: Spring Boot
 grand_parent: Error
-nav_order: 1
 ---
 
 {: .warning }
 java.lang.nullpointerexception: cannot invoke "string.length()" because "s" is null
+
 
 
 spring boot는 JPA 컬럼명을 생성할 때, 스네이크 표기법이 아닌 카멜 표기법을 이용한다고 한다.  
@@ -19,6 +19,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     boolean existsByUsr_Id(String usr_id);
 }
 ```
+
 
 그렇게하다보니 함수명에 언더바가 들어가게 되었고 그 결과 오류가 발생했다.  
 언더바를 없애도 해당 컬럼이 없다 그랬었나 여하튼 그런 오류가 발생하여 Entity를 모두 카멜표기법으로 바꿨다.
@@ -36,6 +37,7 @@ public class UserEntity {
     private String isDlt;
 }
 ```
+
 
 userEntity의 컬럼명을 수정하고 실행을 하니 nullpointerexception오류가 발생하였다.  
 구글링해서 원인이 뭔지 몰라서 한참 찾다가 API를 요청하는 json에 키값을 안 바꾼게 눈에 보여서 수정을 하니

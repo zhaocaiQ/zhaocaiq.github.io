@@ -9,7 +9,7 @@ grand_parent: Error
  Table "BATCH_JOB_INSTANCE" not found
 
 
-Spring batch 코드를 작성한 후 실행을 했지만 위와 같은 오류가 발생함.
+Spring batch 코드를 작성한 후 실행을 했지만 위와 같은 오류가 발생함.   
 해당 테이블이 필요하지만 해당 테이블이 생성이 되지 않아 일어난 오류였다.
 
 

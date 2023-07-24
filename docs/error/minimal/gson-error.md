@@ -3,7 +3,6 @@ title: GSON return오류
 layout: default
 parent: Spring Boot
 grand_parent: Error
-nav_order: 5
 ---
 
 {: .warning }
