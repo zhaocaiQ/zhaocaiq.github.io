@@ -1,7 +1,7 @@
 ---
 title: API프로젝트-1 회원 CRUD
 layout: default
-parent: Spring
+parent: Spring-Boot
 grand_parent: Programming
 nav_exclude: true
 ---
