@@ -524,12 +524,12 @@ INSERT INTO TH_USR_USR(USR_ID,
 
 ## 발생 오류      
 
+### **오류1**
 
 {: .warning }
 Cannot invoke "com.education3.education3.service.User.UserService.createUser(com.education3.education3.entity.user.UserEntity)" because "this.userService" is null
 
-- Controller에서 UserService에 @Autowired 어노테이션을 설정하지 않아서 생긴 오류   
-
+- Controller에서 UserService에 @Autowired 어노테이션을 설정하지 않아서 생긴 오류      
 
 **[오류 코드]**   
 
@@ -554,15 +554,14 @@ public class UserController {
 }
 ```
 
-
+### **오류2**
 
 {: .warning }
 Invalid bound statement (not found)
 
+
 - 이전에 [오류 게시글]에도 올렸었는데 다른 이유로 또 발생하였다.    
 이번엔 Mapper.xml에서 패키지 경로를 잘못 입력해서 였다.(education3로 입력해야 했는데 education으로 입력)    
-
-
 
 **[오류 코드]**   
 
@@ -583,15 +582,14 @@ Invalid bound statement (not found)
 ```
 
 
-
+### **오류3**
 
 {: .warning }
 Required URI template variable 'usrNo' for method parameter type Long is not present
 
+
 - 변수명이 서로 달라서 생긴 오류   
-url 경로에는 {id}로 입력하고선 @PathVariable에서는 usrNo으로 입력함   
-
-
+url 경로에는 {id}로 입력하고선 @PathVariable에서는 usrNo으로 입력함    
 
 **[오류 코드]**   
 
@@ -621,7 +619,9 @@ public UserEntity getUser(@PathVariable Long id){
 
 ## 실행 결과
 
-- 유저 생성(method: post, url: localhost:8085/v1/user)
+### 유저 생성
+- method: post   
+- url: localhost:8085/v1/user   
 
 **[기존 테이블]**   
 ![api-project1-2](/assets/images/api-project1-2.png)   
@@ -632,24 +632,34 @@ public UserEntity getUser(@PathVariable Long id){
 **[결과]**   
 ![api-project1-4](/assets/images/api-project1-4.png)    
 
-- 유저 조회   
+### 유저 생성
+- method: get   
+- url: localhost:8085/v1/user/all     
+
 **[모든유저 조회 결과]**    
 ![api-project1-5](/assets/images/api-project1-5.png)   
 
+### 유저 생성
+- method: get   
+- url: localhost:8085/v1/user/2   
 **[특정유저 조회 결과]**   
 ![api-project1-6](/assets/images/api-project1-6.png)    
 
-- 유저 업데이트(유저이용X)   
+### 유저 업데이트
+- method: put   
+- url: localhost:8085/v1/user/2   
 **[실행 화면]**    
 ![api-project1-7](/assets/images/api-project1-7.png)    
 
 **[결과]**   
-- master테이블   
+   - master테이블   
 ![api-project1-8](/assets/images/api-project1-8.png)   
-- history테이블   
+    - history테이블   
 ![api-project1-9](/assets/images/api-project1-9.png)   
 
-- 유저 삭제   
+### 유저 삭제
+- method: delete   
+- url: localhost:8085/v1/user/2      
 **[실행 화면]**    
 ![api-project1-10](/assets/images/api-project1-10.png)   
 
