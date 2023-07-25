@@ -135,6 +135,27 @@ public class UserHistoryEntity {
 }
 ```
 
+### **Dto**   
+
+업데이트 시, 필요한 정보를 담는 Dto를 생성하여 이용
+
+- UpdateUserDto   
+```
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+public class UpdateUserDto {
+    private Long usrNo;
+    private String isDlt;
+    private String udtNo;
+    private LocalDateTime udtDtm;
+}
+```    
+
 
 ### **Service**      
 - UserService    
