@@ -5,6 +5,15 @@ parent: Spring
 grand_parent: Programming
 ---
 
+### 목록
+
+[application.yml에 필요한 설정입력](##application.yml에 필요한 설정입력)
+[MVC를 위한 폴더구조](##MVC를 위한 폴더구조)
+[구현 코드](##구현 코드)
+[발생 오류](##발생 오류)
+[실행결과](##실행 결과)
+
+***
 
 ## application.yml에 필요한 설정입력   
 
@@ -63,14 +72,14 @@ dto: entity와 비슷함. 요청/응답에 필요한 객체를 생성하여 이�
 entity: 데이터베이스 테이블에 필요한 컬럼 설정   
 mapper: interface로 필요한 함수 선언   
 service:   
-   - service interface: 필요한 함수 선언 
-   - service Impl: controller에서 들어온 요청이 실행되는 곳    
+   -- service interface: 필요한 함수 선언    
+   -- service Impl: controller에서 들어온 요청이 실행되는 곳    
 
 ***
 
 ## 구현 코드   
 
-### Entity   
+### **Entity**   
 - UserEntity   
 
 ```
@@ -96,8 +105,9 @@ public class UserEntity {
     private String udtNo;          //수정자번호
     private LocalDateTime udtDtm;  //수정날짜
 }
-```   
+```
 
+    
 - UserHistoryEntity   
 
 ```
@@ -123,9 +133,10 @@ public class UserHistoryEntity {
     private String udtNo;          //수정자번호
     private LocalDateTime udtDtm;  //수정날짜
 }
-```   
+```
 
-### Service      
+
+### **Service**      
 - UserService    
 
 ```
@@ -143,7 +154,9 @@ public interface UserService {
 }
 ```
 
+
 - UserServiceImpl    
+
 ```
 import com.education3.education3.dto.UpdateUserDto;
 import com.education3.education3.entity.user.UserEntity;
@@ -265,9 +278,10 @@ public class UserServiceImpl implements UserService{
 ```
 
 
-### Mapper    
+### **Mapper**    
 
 - UserMapper   
+
 ```
 import com.education3.education3.dto.UpdateUserDto;
 import com.education3.education3.entity.user.UserEntity;
@@ -291,6 +305,7 @@ public interface UserMapper {
 ```
 
 - UserMapper.xml    
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -376,9 +391,10 @@ public interface UserMapper {
 </mapper>
 ```
 
-### Controller   
+### **Controller**   
 
 - UserController       
+
 ```
 import com.education3.education3.entity.user.UserEntity;
 import com.education3.education3.service.User.UserService;
@@ -426,9 +442,10 @@ public class UserController {
 }
 ```
 
-#### 테이블, 레코드 생성 코드
+#### **테이블, 레코드 생성 코드**
 
 - schema.sql   
+
 ```
 DROP TABLE IF EXISTS tm_usr_usr CASCADE;
 DROP TABLE IF EXISTS th_usr_usr CASCADE;
@@ -459,9 +476,10 @@ CREATE TABLE th_usr_usr (
         udt_dtm timestamp,   --수정날짜
         primary key (usr_no)
     )
-```   
+```
 
 - data.sql    
+
 ```
 --유저정보
 INSERT INTO TM_USR_USR(usr_id,
@@ -480,7 +498,7 @@ INSERT INTO TM_USR_USR(usr_id,
               '2021-07-07 17:03:22.822812',
               '001',
               '2021-07-07 17:03:22.822812');
-
+              
 INSERT INTO TH_USR_USR(USR_ID,
                        USR_NM,
                        USR_PW,
@@ -497,10 +515,12 @@ INSERT INTO TH_USR_USR(USR_ID,
               '2023-07-07 17:03:22.822812',
               '001',
               '2023-07-07 17:03:22.822812');
-```   
+```
 
 
 ***
+
+
 
 ## 발생 오류      
 
@@ -534,11 +554,15 @@ public class UserController {
 }
 ```
 
+
+
 {: .warning }
 Invalid bound statement (not found)
 
 - 이전에 [오류 게시글]에도 올렸었는데 다른 이유로 또 발생하였다.    
 이번엔 Mapper.xml에서 패키지 경로를 잘못 입력해서 였다.(education3로 입력해야 했는데 education으로 입력)    
+
+
 
 **[오류 코드]**   
 
@@ -547,6 +571,8 @@ Invalid bound statement (not found)
  ...
 </mapper>
 ```
+
+
 
 **[해결 코드]**   
 
@@ -557,11 +583,15 @@ Invalid bound statement (not found)
 ```
 
 
+
+
 {: .warning }
 Required URI template variable 'usrNo' for method parameter type Long is not present
 
 - 변수명이 서로 달라서 생긴 오류   
 url 경로에는 {id}로 입력하고선 @PathVariable에서는 usrNo으로 입력함   
+
+
 
 **[오류 코드]**   
 
@@ -573,6 +603,8 @@ public UserEntity getUser(@PathVariable Long usrNo){
 }
 ```
 
+
+
 **[해결 코드]**   
 
 ```
@@ -582,6 +614,10 @@ public UserEntity getUser(@PathVariable Long id){
     return user;
 }
 ```
+
+***
+
+
 
 ## 실행 결과
 
