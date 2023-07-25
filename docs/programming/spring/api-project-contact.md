@@ -21,8 +21,7 @@ grand_parent: Programming
 
 ### **Entity**   
 
-- UserContactEntity    
-
+- UserContactEntity
 ```
 import lombok.Builder;
 import lombok.Data;
@@ -47,8 +46,7 @@ public class UserContactEntity {
 }
 ```
 
-- UserContactHistoryEntity    
-
+- UserContactHistoryEntity
 ```
 import lombok.Builder;
 import lombok.Data;
@@ -77,8 +75,7 @@ public class UserContactHistoryEntity {
 
 이전 게시글에서는 회원정보만 가지고 회원가입을 했기 때문에 UserEntity를 이용하여 정보를 받았지만, 회원정보 테이블이 추가 되어 따로 정보를 받는 Dto를 생성하였다.   
 
-- SignUpUserDto    
-
+- SignUpUserDto
 ```
 import lombok.AllArgsConstructor;
 import lombok.Builder;
