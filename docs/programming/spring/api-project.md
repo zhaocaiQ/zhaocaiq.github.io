@@ -264,6 +264,7 @@ public class UserServiceImpl implements UserService{
 }
 ```
 
+
 ### Mapper    
 
 - UserMapper   
@@ -457,8 +458,7 @@ CREATE TABLE th_usr_usr (
         udt_no varchar(20),  --수정자 번호
         udt_dtm timestamp,   --수정날짜
         primary key (usr_no)
-    );
-
+    )
 ```   
 
 - data.sql    
@@ -511,7 +511,7 @@ Cannot invoke "com.education3.education3.service.User.UserService.createUser(com
 - Controller에서 UserService에 @Autowired 어노테이션을 설정하지 않아서 생긴 오류   
 
 
-** [오류 코드] **   
+**[오류 코드]**   
 
 ```
 @RestController
@@ -522,7 +522,7 @@ public class UserController {
 }
 ```
 
-** [해결 코드] **   
+**[해결 코드]**   
 
 ```
 @RestController
@@ -540,7 +540,7 @@ Invalid bound statement (not found)
 - 이전에 [오류 게시글]에도 올렸었는데 다른 이유로 또 발생하였다.    
 이번엔 Mapper.xml에서 패키지 경로를 잘못 입력해서 였다.(education3로 입력해야 했는데 education으로 입력)    
 
-** [오류 코드] **   
+**[오류 코드]**   
 
 ```
 <mapper namespace="com.education.education3.mapper.UserMapper">
@@ -548,7 +548,7 @@ Invalid bound statement (not found)
 </mapper>
 ```
 
-** [해결 코드] **   
+**[해결 코드]**   
 
 ```
 <mapper namespace="com.education3.education3.mapper.UserMapper">
@@ -563,7 +563,7 @@ Required URI template variable 'usrNo' for method parameter type Long is not pre
 - 변수명이 서로 달라서 생긴 오류   
 url 경로에는 {id}로 입력하고선 @PathVariable에서는 usrNo으로 입력함   
 
-** [오류 코드] **   
+**[오류 코드]**   
 
 ```
 @GetMapping("/v1/user/{id}")
@@ -573,7 +573,7 @@ public UserEntity getUser(@PathVariable Long usrNo){
 }
 ```
 
-** [해결 코드] **   
+**[해결 코드]**   
 
 ```
 @GetMapping("/v1/user/{id}")
@@ -587,37 +587,37 @@ public UserEntity getUser(@PathVariable Long id){
 
 - 유저 생성(method: post, url: localhost:8085/v1/user)
 
-** [기존 테이블] **   
+**[기존 테이블]**   
 ![api-project1-2](/assets/images/api-project1-2.png)   
 
-** [실행 화면] **    
+**[실행 화면]**    
 ![api-project1-3](/assets/images/api-project1-3.png)   
 
-** [결과] **   
+**[결과]**   
 ![api-project1-4](/assets/images/api-project1-4.png)    
 
 - 유저 조회   
-** [모든유저 조회 결과] **    
+**[모든유저 조회 결과]**    
 ![api-project1-5](/assets/images/api-project1-5.png)   
 
-** [특정유저 조회 결과] **   
+**[특정유저 조회 결과]**   
 ![api-project1-6](/assets/images/api-project1-6.png)    
 
 - 유저 업데이트(유저이용X)   
-** [실행 화면] **    
+**[실행 화면]**    
 ![api-project1-7](/assets/images/api-project1-7.png)    
 
-** [결과] **   
+**[결과]**   
 - master테이블   
 ![api-project1-8](/assets/images/api-project1-8.png)   
 - history테이블   
 ![api-project1-9](/assets/images/api-project1-9.png)   
 
 - 유저 삭제   
-** [실행 화면] **    
+**[실행 화면]**    
 ![api-project1-10](/assets/images/api-project1-10.png)   
 
-** [결과] **   
+**[결과]**   
 ![api-project1-11](/assets/images/api-project1-11.png)   
 
 [오류 게시글]: https://zhaocaiq.github.io/docs/error/minimal/mybatis-error/
