@@ -8,7 +8,7 @@ grand_parent: Programming
 ### **목차**
   
 - [구현코드](#구현코드)    
-- [실행결과](#실행-결과)   
+- [실행결과](#실행결과)   
 
 ***
 
@@ -20,7 +20,9 @@ grand_parent: Programming
 ## 구현코드    
 
 ### **Entity**   
-- UserContactEntity   
+
+- UserContactEntity    
+
 ```
 import lombok.Builder;
 import lombok.Data;
@@ -44,7 +46,9 @@ public class UserContactEntity {
     private LocalDateTime udtDtm;  //수정날짜
 }
 ```
+
 - UserContactHistoryEntity    
+
 ```
 import lombok.Builder;
 import lombok.Data;
@@ -73,7 +77,8 @@ public class UserContactHistoryEntity {
 
 이전 게시글에서는 회원정보만 가지고 회원가입을 했기 때문에 UserEntity를 이용하여 정보를 받았지만, 회원정보 테이블이 추가 되어 따로 정보를 받는 Dto를 생성하였다.   
 
-- SignUpUserDto
+- SignUpUserDto    
+
 ```
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -107,7 +112,8 @@ public class SignUpUserDto {
 
 ### **Service**  
 
-- UserService
+- UserService    
+
 ```
 import com.education3.education3.dto.SignUpUserDto;
 import com.education3.education3.entity.user.UserEntity;
@@ -129,7 +135,8 @@ public interface UserService {
 ```
 - UserServiceImpl   
 
-기존 UserServiceImpl.java에 추가로 구현
+기존 UserServiceImpl.java에 추가로 구현   
+
 ```
 import com.education3.education3.dto.SignUpUserDto;
 import com.education3.education3.dto.UpdateUserDto;
@@ -242,6 +249,7 @@ public class UserServiceImpl implements UserService{
 ### **Mapper**  
 
 - UserMapper   
+
 ```
 import com.education3.education3.dto.UpdateUserDto;
 import com.education3.education3.entity.user.UserContactEntity;
@@ -273,6 +281,7 @@ public interface UserMapper {
 }
 ```
 
+- UserMapper.xml   
 
 ```
 <mapper namespace="com.education3.education3.mapper.UserMapper">
@@ -362,6 +371,7 @@ public interface UserMapper {
 조회API를 제외하고는 가입과 탈퇴 및 삭제시 회원과 함께 회원정보 service도 같이 처리되도록 코드를 수정하였다.   
 
 - UserController       
+
 ```
 import com.education3.education3.dto.SignUpUserDto;
 import com.education3.education3.entity.user.UserEntity;
@@ -434,6 +444,7 @@ public class UserController {
 #### **테이블, 레코드 생성 코드**
 
 - schema.sql   
+
 ```
 --추가코드
 DROP TABLE IF EXISTS td_usr_cnt CASCADE;
@@ -472,3 +483,35 @@ CREATE TABLE th_usr_cnt (
         primary key (cnt_no, usr_no)
     );
 ```
+
+## 실행결과
+
+### **유저 생성**
+- method: post   
+- url: localhost:8085/v1/user   
+
+**[실행 화면]**   
+![api-project2-1](/assets/images/api-project2-1.png)   
+
+**[결과]**   
+![api-project2-2](/assets/images/api-project2-2.png)   
+
+### **유저 수정**
+- method: put   
+- url: localhost:8085/v1/user/2   
+
+**[실행 화면]**   
+![api-project2-3](/assets/images/api-project2-3.png)   
+
+**[결과]**   
+![api-project2-4](/assets/images/api-project2-4.png)   
+
+### **유저 삭제**
+- method: delete   
+- url: localhost:8085/v1/user/2   
+
+**[실행 화면]**   
+![api-project2-5](/assets/images/api-project2-5.png)   
+
+**[결과]**   
+![api-project2-6](/assets/images/api-project2-6.png)   
