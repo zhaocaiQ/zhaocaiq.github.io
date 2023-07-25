@@ -58,11 +58,11 @@ mybatis:
 
 ![api-project1-1](/assets/images/api-project1-1.png)    
 
-controller: 요청과 응답이 이루어짐
-dto: entity와 비슷함. 요청/응답에 필요한 객체를 생성하여 이용
-entity: 데이터베이스 테이블에 필요한 컬럼 설정
-mapper: interface로 필요한 함수 선언
-service:
+controller: 요청과 응답이 이루어짐   
+dto: entity와 비슷함. 요청/응답에 필요한 객체를 생성하여 이용   
+entity: 데이터베이스 테이블에 필요한 컬럼 설정   
+mapper: interface로 필요한 함수 선언   
+service:   
    - service interface: 필요한 함수 선언 
    - service Impl: controller에서 들어온 요청이 실행되는 곳    
 
@@ -70,7 +70,7 @@ service:
 
 ## 구현 코드   
 
-#### Entity   
+### Entity   
 - UserEntity   
 
 ```
@@ -96,7 +96,7 @@ public class UserEntity {
     private String udtNo;          //수정자번호
     private LocalDateTime udtDtm;  //수정날짜
 }
-```
+```   
 
 - UserHistoryEntity   
 
@@ -123,10 +123,11 @@ public class UserHistoryEntity {
     private String udtNo;          //수정자번호
     private LocalDateTime udtDtm;  //수정날짜
 }
-```
+```   
 
-#### Service      
+### Service      
 - UserService    
+
 ```
 import com.education3.education3.entity.user.UserEntity;
 
@@ -139,7 +140,6 @@ public interface UserService {
     String createUser(UserEntity userEntity);
     String updateUser(Long id, String udtNo);
     String deleteUser(Long id);
-
 }
 ```
 
@@ -264,7 +264,7 @@ public class UserServiceImpl implements UserService{
 }
 ```
 
-#### Mapper    
+### Mapper    
 
 - UserMapper   
 ```
@@ -375,7 +375,7 @@ public interface UserMapper {
 </mapper>
 ```
 
-#### Controller   
+### Controller   
 
 - UserController       
 ```
@@ -425,7 +425,7 @@ public class UserController {
 }
 ```
 
-##### 테이블, 레코드 생성 코드
+#### 테이블, 레코드 생성 코드
 
 - schema.sql   
 ```
@@ -459,7 +459,7 @@ CREATE TABLE th_usr_usr (
         primary key (usr_no)
     );
 
-```
+```   
 
 - data.sql    
 ```
@@ -497,7 +497,7 @@ INSERT INTO TH_USR_USR(USR_ID,
               '2023-07-07 17:03:22.822812',
               '001',
               '2023-07-07 17:03:22.822812');
-```
+```   
 
 
 ***
@@ -511,7 +511,7 @@ Cannot invoke "com.education3.education3.service.User.UserService.createUser(com
 - Controller에서 UserService에 @Autowired 어노테이션을 설정하지 않아서 생긴 오류   
 
 
-[오류 코드]   
+** [오류 코드] **   
 
 ```
 @RestController
@@ -522,7 +522,7 @@ public class UserController {
 }
 ```
 
-[해결 코드]   
+** [해결 코드] **   
 
 ```
 @RestController
@@ -540,7 +540,7 @@ Invalid bound statement (not found)
 - 이전에 [오류 게시글]에도 올렸었는데 다른 이유로 또 발생하였다.    
 이번엔 Mapper.xml에서 패키지 경로를 잘못 입력해서 였다.(education3로 입력해야 했는데 education으로 입력)    
 
-[오류 코드]   
+** [오류 코드] **   
 
 ```
 <mapper namespace="com.education.education3.mapper.UserMapper">
@@ -548,7 +548,7 @@ Invalid bound statement (not found)
 </mapper>
 ```
 
-[해결 코드]   
+** [해결 코드] **   
 
 ```
 <mapper namespace="com.education3.education3.mapper.UserMapper">
@@ -563,7 +563,7 @@ Required URI template variable 'usrNo' for method parameter type Long is not pre
 - 변수명이 서로 달라서 생긴 오류   
 url 경로에는 {id}로 입력하고선 @PathVariable에서는 usrNo으로 입력함   
 
-[오류 코드]   
+** [오류 코드] **   
 
 ```
 @GetMapping("/v1/user/{id}")
@@ -573,7 +573,7 @@ public UserEntity getUser(@PathVariable Long usrNo){
 }
 ```
 
-[해결 코드]   
+** [해결 코드] **   
 
 ```
 @GetMapping("/v1/user/{id}")
@@ -587,37 +587,37 @@ public UserEntity getUser(@PathVariable Long id){
 
 - 유저 생성(method: post, url: localhost:8085/v1/user)
 
-[기존 테이블]   
+** [기존 테이블] **   
 ![api-project1-2](/assets/images/api-project1-2.png)   
 
-[실행 화면]    
+** [실행 화면] **    
 ![api-project1-3](/assets/images/api-project1-3.png)   
 
-[결과]   
+** [결과] **   
 ![api-project1-4](/assets/images/api-project1-4.png)    
 
 - 유저 조회   
-[모든유저 조회 결과]    
+** [모든유저 조회 결과] **    
 ![api-project1-5](/assets/images/api-project1-5.png)   
 
-[특정유저 조회 결과]   
+** [특정유저 조회 결과] **   
 ![api-project1-6](/assets/images/api-project1-6.png)    
 
 - 유저 업데이트(유저이용X)   
-[실행 화면]    
+** [실행 화면] **    
 ![api-project1-7](/assets/images/api-project1-7.png)    
 
-[결과]   
+** [결과] **   
 - master테이블   
 ![api-project1-8](/assets/images/api-project1-8.png)   
 - history테이블   
 ![api-project1-9](/assets/images/api-project1-9.png)   
 
 - 유저 삭제   
-[실행 화면]    
+** [실행 화면] **    
 ![api-project1-10](/assets/images/api-project1-10.png)   
 
-[결과]   
+** [결과] **   
 ![api-project1-11](/assets/images/api-project1-11.png)   
 
 [오류 게시글]: https://zhaocaiq.github.io/docs/error/minimal/mybatis-error/
