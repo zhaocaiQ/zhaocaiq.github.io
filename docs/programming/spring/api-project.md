@@ -619,7 +619,7 @@ public UserEntity getUser(@PathVariable Long id){
 
 ## 실행 결과
 
-### 유저 생성
+### **유저 생성**
 - method: post   
 - url: localhost:8085/v1/user   
 
@@ -632,34 +632,37 @@ public UserEntity getUser(@PathVariable Long id){
 **[결과]**   
 ![api-project1-4](/assets/images/api-project1-4.png)    
 
-### 유저 생성
+### **모든유저 조회**
 - method: get   
 - url: localhost:8085/v1/user/all     
 
-**[모든유저 조회 결과]**    
+**[결과]**    
 ![api-project1-5](/assets/images/api-project1-5.png)   
 
-### 유저 생성
+### **특정유저 조회**
 - method: get   
 - url: localhost:8085/v1/user/2   
-**[특정유저 조회 결과]**   
+
+**[결과]**   
 ![api-project1-6](/assets/images/api-project1-6.png)    
 
-### 유저 업데이트
+### **유저 업데이트**
 - method: put   
 - url: localhost:8085/v1/user/2   
+
 **[실행 화면]**    
 ![api-project1-7](/assets/images/api-project1-7.png)    
 
 **[결과]**   
    - master테이블   
 ![api-project1-8](/assets/images/api-project1-8.png)   
-    - history테이블   
+   - history테이블   
 ![api-project1-9](/assets/images/api-project1-9.png)   
 
-### 유저 삭제
+### **유저 삭제**
 - method: delete   
 - url: localhost:8085/v1/user/2      
+
 **[실행 화면]**    
 ![api-project1-10](/assets/images/api-project1-10.png)   
 
