@@ -7,15 +7,15 @@ grand_parent: Programming
 
 ### **목차**
 
-- [application 필요설정 입력](#application.yml에-필요한-설정입력)   
-- [폴더구조](#MVC를-위한-폴더구조)   
+- [application 필요설정 입력](#필요한-설정입력)   
+- [폴더구조](#폴더구조)   
 - [구현코드](#구현-코드)   
 - [발생오류](#발생-오류)   
 - [실행결과](#실행-결과)   
 
 ***
 
-## application.yml에 필요한 설정입력   
+## 필요한 설정입력   
 
 
 ```
@@ -63,7 +63,7 @@ mybatis:
 ***
 
 
-## MVC를 위한 폴더구조   
+## 폴더구조   
 
 ![api-project1-1](/assets/images/api-project1-1.png)    
 
