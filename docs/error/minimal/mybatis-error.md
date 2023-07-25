@@ -69,14 +69,14 @@ spring:
 
 # model 프로퍼티 camel case 설정
 mybatis:
-configuration:
-    map-underscore-to-camel-case: true
+  configuration:
+      map-underscore-to-camel-case: true
 
-# xml파일 result type에 패키지명을 생략할 수 있도록 alias 설정
-type-aliases-package: com.education.education2
+  # xml파일 result type에 패키지명을 생략할 수 있도록 alias 설정
+  type-aliases-package: com.education.education2
 
-# Mybatis mapper 위치 설정
-mapper-locations: mapper/*.xml
+  # Mybatis mapper 위치 설정
+  mapper-locations: mapper/*.xml
 ```
 
 [@Autowired 어노테이션을 해주지 않아]: https://wakestand.tistory.com/701 "this.mapper is null 오류해결"
