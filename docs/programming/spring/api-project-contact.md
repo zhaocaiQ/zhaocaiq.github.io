@@ -3,6 +3,7 @@ title: API프로젝트-1 회원정보 CRUD
 layout: default
 parent: Spring
 grand_parent: Programming
+nav_order: 2
 ---
 
 ### **목차**
@@ -485,6 +486,8 @@ CREATE TABLE th_usr_cnt (
         primary key (cnt_no, usr_no)
     );
 ```
+
+***
 
 ## 실행결과
 

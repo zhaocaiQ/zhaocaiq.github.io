@@ -3,6 +3,7 @@ title: API프로젝트-1 회원 CRUD
 layout: default
 parent: Spring
 grand_parent: Programming
+nav_order: 3
 ---
 
 ### **목차**
@@ -640,7 +641,6 @@ public UserEntity getUser(@PathVariable Long id){
 ```
 
 ***
-
 
 
 ## 실행 결과
