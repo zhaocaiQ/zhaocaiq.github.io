@@ -12,12 +12,6 @@ nav_order: 3
 - [폴더구조](#폴더구조)   
 - [데이터베이스 구조도](#데이터베이스-구조도)    
 - [구현코드](#구현-코드)   
-  - [Entity](#Entity)   
-  - [Dto](#Dto)   
-  - [Service](#Service)   
-  - [Mapper](#Mapper)
-  - [Controller](#Controller)
-  - [스키마코드](#테이블,-레코드-생성-코드)
 - [발생오류](#발생-오류)   
 - [실행결과](#실행-결과)   
 
@@ -151,7 +145,8 @@ public class UserHistoryEntity {
 
 업데이트 시, 필요한 정보를 담는 Dto를 생성하여 이용
 
-- UpdateUserDto   
+- UpdateUserDto    
+
 ```
 import lombok.Builder;
 import lombok.Data;
