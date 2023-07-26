@@ -9,6 +9,7 @@ grand_parent: Programming
 
 - [application 필요설정 입력](#필요한-설정입력)   
 - [폴더구조](#폴더구조)   
+- [데이터베이스 구조도](#데이터베이스-구조도)    
 - [구현코드](#구현-코드)   
 - [발생오류](#발생-오류)   
 - [실행결과](#실행-결과)   
@@ -76,6 +77,10 @@ service:
    -- service Impl: controller에서 들어온 요청이 실행되는 곳    
 
 ***
+
+## 데이터베이스 구조도
+![db_er.drawio](/assets/images/db_er.drawio.png)    
+
 
 ## 구현 코드   
 
@@ -550,7 +555,7 @@ INSERT INTO TH_USR_USR(USR_ID,
 {: .warning }
 Cannot invoke "com.education3.education3.service.User.UserService.createUser(com.education3.education3.entity.user.UserEntity)" because "this.userService" is null
 
-- Controller에서 UserService에 @Autowired 어노테이션을 설정하지 않아서 생긴 오류      
+- Controller에서 UserService에 [@Autowired 어노테이션]을 설정하지 않아서 생긴 오류      
 
 **[오류 코드]**   
 
@@ -691,3 +696,4 @@ public UserEntity getUser(@PathVariable Long id){
 ![api-project1-11](/assets/images/api-project1-11.png)   
 
 [오류 게시글]: https://zhaocaiq.github.io/docs/error/minimal/mybatis-error/
+[@Autowired 어노테이션]: https://maivve.tistory.com/184
