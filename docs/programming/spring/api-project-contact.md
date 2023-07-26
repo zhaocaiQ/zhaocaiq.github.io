@@ -1,5 +1,5 @@
 ---
-title: API프로젝트-1 회원정보 CRUD
+title: API프로젝트-1 회원정보
 layout: default
 parent: Spring
 grand_parent: Programming
