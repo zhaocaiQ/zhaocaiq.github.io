@@ -56,8 +56,8 @@ userEntity의 컬럼명을 수정하고 실행을 하니 nullpointerexception오
 [변경후]    
 ```
 {
-    "usr_id": "asddf",
-    "usr_pw": "aaaa",
-    "usr_nm": "asdf"
+    "usrId": "asddf",
+    "usrPw": "aaaa",
+    "usrNm": "asdf"
 }
 ```
