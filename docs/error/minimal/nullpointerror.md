@@ -44,6 +44,16 @@ userEntity의 컬럼명을 수정하고 실행을 하니 nullpointerexception오
 오류가 바로 해결되었다.
 
 
+[변경전]    
+```
+{
+    "usr_id": "asddf",
+    "usr_pw": "aaaa",
+    "usr_nm": "asdf"
+}
+```
+
+[변경후]    
 ```
 {
     "usr_id": "asddf",
